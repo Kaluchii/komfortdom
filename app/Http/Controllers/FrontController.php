@@ -17,10 +17,8 @@ class FrontController extends Controller
     private $extract;
     public function __construct(ExtractAgent $ext){
         $this->extract = $ext;
-        $this->extract->tuneSelection('dom_stages')->sortBy('sorter','DESC');
         $this->extract->tuneSelection('layout')->sortBy('sorter','ASC');
         $this->extract->tuneSelection('dom_flat')->sortBy('sorter','ASC');
-        $this->extract->tuneSelection('stage_images')->sortBy('sorter','ASC');
     }
 
 
@@ -28,7 +26,6 @@ class FrontController extends Controller
         $main_block = $this->extract->getBlock('main_block');
         $about = $this->extract->getBlock('about');
         $gallery = $this->extract->getBlock('gallery');
-        $stages = $this->extract->getBlock('stages');
         $flats = $this->extract->getBlock('flats');
         $contacts = $this->extract->getBlock('contacts');
         $prices = $this->extract->getBlock('prices');
@@ -37,7 +34,6 @@ class FrontController extends Controller
             'main_block' => $main_block,
             'about' => $about,
             'gallery' => $gallery,
-            'stages' => $stages,
             'flats' => $flats,
             'contacts' => $contacts,
             'prices' => $prices,

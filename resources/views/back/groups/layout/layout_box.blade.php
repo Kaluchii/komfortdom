@@ -29,17 +29,6 @@
         </div>
 
         <div class="form-group">
-            <label>Блок</label>
-            <input class="form-control string"
-                   type="text" placeholder=""
-                   value="{{$item->block_field}}"
-                   data-name="block"
-                   data-type="string"
-                   data-block="layout"
-                   data-id="{{$item->id_field}}">
-        </div>
-
-        <div class="form-group">
             <label>Этаж</label>
             <input class="form-control string"
                    type="text" placeholder=""

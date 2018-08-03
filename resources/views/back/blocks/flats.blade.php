@@ -44,7 +44,7 @@
                                                data-block="flats"
                                                data-name="title"
                                                data-type="file"
-                                               value="{{$block->layouts_field->title}}"
+                                               value="{{$flats->layouts_field->title}}"
                                                data-id="0"
                                                placeholder="Имя файла при скачивании">
                                         <div class="clearfix"></div>

@@ -17,12 +17,14 @@
                        data-id="0">
             </div>
             <div class="form-group">
-                <label>Текст под заголовком</label>
-                <textarea class="form-control text"
-                          data-name="text"
-                          data-type="text"
-                          data-block="contacts"
-                          data-id="0">{{$contacts->text_field}}</textarea>
+                <label>Адрес местоположения</label>
+                <input class="form-control string"
+                       type="text" placeholder=""
+                       value="{{$contacts->address_field}}"
+                       data-name="address"
+                       data-type="string"
+                       data-block="contacts"
+                       data-id="0">
             </div>
             <div class="form-group">
                 <label>Телефон</label>
@@ -35,14 +37,20 @@
                        data-id="0">
             </div>
             <div class="form-group">
-                <label>Адрес местоположения</label>
-                <input class="form-control string"
-                       type="text" placeholder=""
-                       value="{{$contacts->address_field}}"
-                       data-name="address"
-                       data-type="string"
-                       data-block="contacts"
-                       data-id="0">
+                <label>Текст</label>
+                <textarea class="form-control text"
+                          data-name="text"
+                          data-type="text"
+                          data-block="contacts"
+                          data-id="0">{{$contacts->text_field}}</textarea>
+            </div>
+            <div class="form-group">
+                <label>График работы</label>
+                <textarea class="form-control text textarea--small" data-reg="true"
+                          data-name="work_time"
+                          data-type="string"
+                          data-block="contacts"
+                          data-id="0">{{$contacts->work_time_field}}</textarea>
             </div>
         </div>
     </div>

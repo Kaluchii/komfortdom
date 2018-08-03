@@ -12,7 +12,6 @@
                     <li class="header__nav-item"><a href="#about" class="js_goto_anchor header__nav-link">О комплексе</a></li>
                     <li class="header__nav-item"><a href="#gallery" class="js_goto_anchor header__nav-link">Галерея</a></li>
                     <li class="header__nav-item"><a href="#flats" class="js_goto_anchor header__nav-link">Планировки</a></li>
-                    <li class="header__nav-item"><a href="#stages" class="js_goto_anchor header__nav-link">Стройка</a></li>
                     <li class="header__nav-item"><a href="#contacts" class="js_goto_anchor header__nav-link">Контакты</a></li>
                 </ul>
             </nav>
@@ -176,19 +175,6 @@
                     @endforeach
                 </div>
             </div>
-            <div class="for-Google-PageSpeed">
-                @for($i = 0; $i < 9 && isset($slider_arr[$i]); $i++)
-                    <img src="{{ $slider_arr[$i] }}" alt="">
-                @endfor
-                @foreach($stages->dom_stages_group as $stage)
-                    @if($stage->show_field == 1)
-                        @foreach($stage->stage_images_group as $stage_img)
-                            <img src="{{$stage_img->stage_photo_field->link}}?{{$stage_img->stage_photo_field->cache_index}}" alt="">
-                        @endforeach
-                    @endif
-                    @break
-                @endforeach
-            </div>
             <div class="gallery__mobile-gallery mobile-gallery">
                 <ul class="mobile-gallery__list">
                     @for($i = 0; $i < 9 && isset($slider_arr[$i]); $i++)
@@ -323,6 +309,5 @@
     <a href="#title" class="to-top js_goto_anchor js-top-btn" title="Перейти наверх страницы" style="display: none">
         <span class="to-top__arrow"></span>
     </a>
-    <div class="vl"></div>
     @include('front.index.meta')
 @endsection
