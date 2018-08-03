@@ -1,0 +1,577 @@
+.title-block{
+  padding: 25px 30px 350px;
+  background: url("/img/title_bg.jpg?2") no-repeat center bottom/cover;
+  //overflow: hidden;
+  position: relative;
+  z-index: 1;
+
+  &__header{
+    max-width: 1500px;
+    margin: 0 auto;
+  }
+
+  &__text-wrap{
+    padding: 40px 0 0 35px;
+    max-width: 1465px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__col1{
+  }
+
+  &__title{}
+
+  &__price-wrap{
+    position: relative;
+    display: flex;
+    padding-left: 5px;
+  }
+
+  &__price{
+    position: relative;
+    font-family: 'RozhaOne';
+    font-size: 118px;
+    line-height: .8;
+    letter-spacing: -0.004em;
+    color: transparent;
+    background: #c3b06a;
+    background: -moz-linear-gradient(45deg, #c3b06a 0%, #eade85 17%, #c3b06a 61%, #eade85 100%);
+    background: -webkit-gradient(left bottom, right top, color-stop(0%, #c3b06a), color-stop(17%, #eade85), color-stop(61%, #c3b06a), color-stop(100%, #eade85));
+    background: -webkit-linear-gradient(45deg, #c3b06a 0%, #eade85 17%, #c3b06a 61%, #eade85 100%);
+    background: -o-linear-gradient(45deg, #c3b06a 0%, #eade85 17%, #c3b06a 61%, #eade85 100%);
+    background: -ms-linear-gradient(45deg, #c3b06a 0%, #eade85 17%, #c3b06a 61%, #eade85 100%);
+    background: repeating-linear-gradient(4deg, #eade85 0%, #c3b06a 17%, #eade85 61%, #c3b06a 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c3b06a', endColorstr='#eade85', GradientType=1 );
+    -webkit-background-clip: text;
+
+    &::before{
+      content: 'от';
+      position: relative;
+      font-family: "Georgia";
+      font-size: 30px;
+      left: -8px;
+      bottom: 45px;
+      color: #ffffff;
+      text-shadow: none;
+    }
+
+    &--bg{
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: -1;
+      color: #000000;
+      text-shadow: 1px 1px 1px rgba(17, 31, 65, 0.62);
+    }
+  }
+
+  &__t-m{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10px;
+  }
+
+  &__t{
+    line-height: 1;
+    height: 25px;
+    color: transparent;
+    background: url("/img/tenge.png") no-repeat center;
+    background-size: contain;
+  }
+
+  &__m{
+    line-height: 1;
+    font-family: "Georgia";
+    font-size: 30px;
+    color: #ffffff;
+
+    sup{
+      font-family: "Georgia";
+      position: absolute;
+      font-size: 18px;
+    }
+  }
+
+  &__col2{
+    padding-top: 15px;
+    width: 580px;
+    position: relative;
+  }
+
+  &__installment{
+    padding-left: 85px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: .19em;
+    color: #ffffff;
+    position: relative;
+
+    &::before{
+      content: '';
+      position: absolute;
+      width: 57px;
+      height: 56px;
+      top: -3px;
+      left: 0;
+      background: url("/img/tenge_circle.png") no-repeat center;
+    }
+  }
+
+  &__popup{
+    position: absolute;
+    margin-top: 35px;
+    z-index: 10;
+  }
+
+  &__parking{
+    margin-top: 25px;
+    width: 260px;
+  }
+}
+
+.fixed-header{
+  display: none;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px 30px 12px 25px;
+  background-color: #232323;
+
+  &__header{
+    max-width: 1500px;
+    margin: 0 auto;
+  }
+}
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__menu-button{
+    display: none;
+  }
+
+  &__nav-wrap{
+    position: relative;
+    z-index: 10;
+    max-width: 700px;
+    margin: 0 60px;
+    width: 100%;
+  }
+
+  &__nav-list{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__nav-item{
+    &:hover{
+      &::before{
+        opacity: 1;
+      }
+    }
+
+    &--fixed{
+      position: relative;
+
+      &:hover{
+        .header__nav-link{
+          color: #f3e694;
+        }
+      }
+
+      &::before{
+        content: '';
+        position: absolute;
+        opacity: 0;
+        z-index: -1;
+        top: -32px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: url("/img/nav_link_lamp.png") no-repeat center;
+        width: 134px;
+        height: 37px;
+        transition: .3s;
+      }
+
+      &.is-active{
+        &::before{
+          opacity: 1;
+        }
+
+        .header__nav-link{
+          color: #f3e694;
+        }
+      }
+    }
+  }
+
+  &__nav-link{
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.4);
+    letter-spacing: 0.05em;
+    transition: color .3s;
+
+    &:hover{
+      color: #f3e694;
+    }
+  }
+
+  &__logo-wrap{
+    position: relative;
+    z-index: 9;
+    padding-bottom: 13px;
+    flex-shrink: 0;
+
+    &--fixed{
+      padding-bottom: 0;
+    }
+  }
+
+  &__logo-link{
+    font-size: 0;
+  }
+
+  &__logo{
+    &--fixed{
+      max-height: 62px;
+    }
+  }
+
+  &__feedback-wrap{
+    display: flex;
+    text-align: right;
+    position: relative;
+    z-index: 9;
+    flex-shrink: 0;
+  }
+
+  &__phone-wrap{
+    margin-right: 30px;
+  }
+
+  &__consult{
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.4);
+    font-style: italic;
+    font-weight: 300;
+    letter-spacing: .05em;
+  }
+
+  &__phone-number{
+    margin-top: 2px;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: .05em;
+    color: #ffffff;
+    line-height: 1;
+  }
+
+  &__phone-number-link{
+    color: inherit;
+  }
+
+  &__order-call{
+  }
+
+  &__btn-text{
+  }
+}
+
+.title-popup{
+  width: 100%;
+
+  &__wrapper{
+    position: relative;
+
+    &::after{
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 331px;
+      height: 456px;
+      background: url('/img/balls.png') no-repeat center / contain;
+    }
+  }
+
+  &__interest-text{
+    padding-left: 5px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: .2em;
+    color: #1b1b1b;
+  }
+
+  &__input-rows{
+    position: relative;
+    z-index: 1;
+    padding-left: 5px;
+    margin-top: 20px;
+    max-width: 300px;
+  }
+
+  &__row{
+    margin-top: 15px;
+
+    &--btn{
+      margin-top: 20px;
+    }
+  }
+
+  &__close{
+    background: url("/img/popup_close.png") no-repeat center;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: 18px;
+    top: 16px;
+    cursor: pointer;
+    opacity: .7;
+    transition: .3s;
+
+    &:hover{
+      opacity: 1;
+    }
+  }
+
+  &__parking{
+    display: none;
+  }
+
+  &__row-1{
+    padding: 25px 25px 28px;
+    background-color: #fff;
+  }
+
+  &__row-2{
+    padding: 20px 20px 35px;
+    background: url("/img/form_lighter.png") no-repeat left bottom / 540px 300px, url("/img/popup_bg.png") repeat;
+  }
+
+  &__discount-wrap{
+    display: flex;
+  }
+
+  &__discount{
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: .03em;
+    color: #ac9530;
+  }
+
+  &__discount-img{
+    position: relative;
+    left: -5px;
+    margin-top: 10px;
+    width: 273px;
+    height: 80px;
+    background: url('/img/discount_7.png') no-repeat center / contain;
+  }
+
+  &__condition{
+    position: relative;
+    top: 2px;
+    max-width: 80px;
+    padding-left: 15px;
+    font-size: 15px;
+    line-height: 1.2;
+    letter-spacing: .05em;
+    color: #232323;
+  }
+
+  &__bold{
+    font-weight: 800;
+  }
+}
+
+.popup-input{
+  position: relative;
+
+  &.error:not(.filling){
+    .popup-input{
+      &__input{
+        background-color: #fff;
+
+        &:focus{
+          background-color: #fff;
+        }
+      }
+
+      &__label{
+        &--tel{
+          border-color: #d65137;
+        }
+      }
+    }
+  }
+
+  &__label{
+    background-color: transparent;
+    position: absolute;
+    height: 50px;
+    width: 55px;
+    font-size: 16px;
+    color: #201306;
+    transition: .3s;
+
+    &--name{
+    }
+
+    &--tel{
+      height: 48px;
+      width: 47px;
+      border: 1px solid #fff;
+      background-color: #fff;
+    }
+  }
+
+  &__label-text{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 17px;
+    font-size: inherit;
+    text-align: center;
+    color: inherit;
+  }
+
+  &__input{
+    background-color: #fff;
+    border: 1px solid #fff;
+    padding: 0 30px 0 80px;
+    font-size: 18px;
+    box-sizing: border-box;
+    height: 50px;
+    width: 100%;
+    color: #201306;
+    letter-spacing: 0.04em;
+    transition: .3s;
+
+    &:focus{
+      border-color: #bbbbbb;
+    }
+
+    &--tel{
+      width: ~'calc(100% - 60px)';
+      margin-left: 60px;
+      padding-left: 20px;
+    }
+  }
+
+  &__btn{}
+}
+
+.menu-button{
+  box-sizing: border-box;
+  width: 57px;
+  height: 62px;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  cursor: pointer;
+
+  &.is-open{
+    .menu-button{
+      &__top{
+        transform: rotate(45deg);
+        width: 11px;
+        top: 5px;
+        left: 1px;
+      }
+
+      &__middle{
+        transform: rotate(-45deg);
+        width: 22px;
+      }
+
+      &__bottom{
+        transform: rotate(45deg);
+        width: 11px;
+        left: 9px;
+        bottom: 5px;
+      }
+    }
+  }
+
+  &__rows-wrap{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__top{
+    display: block;
+    position: relative;
+    left: 0;
+    top: 0;
+    height: 2px;
+    width: 20px;
+    background-color: #c2ae68;
+    transition: .3s
+  }
+
+  &__middle{
+    margin-top: 7px;
+    display: block;
+    position: relative;
+    height: 2px;
+    width: 20px;
+    background-color: #c2ae68;
+    transition: .3s
+  }
+
+  &__bottom{
+    margin-top: 7px;
+    display: block;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 20px;
+    background-color: #c2ae68;
+    transition: .3s
+  }
+}
+
+.parking{
+  padding: 20px 0 77px;
+  text-align: center;
+  background: url("/img/parking_car.jpg") no-repeat center bottom / 260px, #fff;
+
+  &__top-text{
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: .03em;
+    color: #bba543;
+  }
+
+  &__middle-text{
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: .02em;
+    color: #bba543;
+  }
+
+  &__bottom-text{
+    margin-top: 4px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: .04em;
+    color: #232323;
+  }
+}

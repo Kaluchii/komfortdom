@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /adm
+
+User-agent: Yandex
+Disallow: /adm
+
+Host: https://prestizhdom.kz

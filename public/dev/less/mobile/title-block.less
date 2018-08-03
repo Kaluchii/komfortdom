@@ -1,0 +1,505 @@
+@media screen and (max-width: 1240px) {
+  .title-block{
+    &__header{
+    }
+
+    &__text-wrap{
+      padding-left: 0;
+    }
+
+    &__col1{}
+
+    &__title{}
+
+    &__price-wrap{
+    }
+
+    &__price{
+      &::before{
+      }
+    }
+
+    &__t-m{
+    }
+
+    &__t{
+    }
+
+    &__m{
+      sup{
+      }
+    }
+
+    &__col2{
+      width: 100%;
+      max-width: 450px;
+    }
+
+    &__installment{
+      &::before{
+      }
+    }
+
+    &__popup{
+    }
+  }
+
+  .header{
+
+    &__menu-button{
+    }
+
+    &__nav-wrap{
+    }
+
+    &__nav-list{
+    }
+
+    &__nav-item{
+    }
+
+    &__nav-link{
+
+      &:hover{
+      }
+    }
+
+    &__logo-wrap{
+    }
+
+    &__logo{}
+
+    &__feedback-wrap{
+    }
+
+    &__phone-wrap{
+    }
+
+    &__consult{
+    }
+
+    &__phone-number{
+    }
+
+    &__order-call{
+    }
+
+    &__btn-text{
+    }
+  }
+
+  .title-popup{
+    .form-row{
+      &__tooltip-wrap{
+        left: auto;
+        right: 0;
+        top: auto;
+        bottom: ~'calc(100% + 10px)';
+        transform: none;
+        width: auto;
+        max-width: none;
+      }
+
+      &__tooltip{
+        &--shadow{
+          &::before, &::after {
+            bottom: -5px;
+            top: auto;
+            left: ~'calc(50% - 5px)';
+          }
+        }
+
+        &--border{
+          &::before, &::after {
+            bottom: -5px;
+            top: auto;
+            left: ~'calc(50% - 5px)';
+          }
+
+          &::before{
+            bottom: -3px;
+            top: auto;
+            left: ~'calc(50% - 3px)';
+          }
+        }
+      }
+    }
+
+    &__wrapper{
+      &::after{
+        display: none;
+      }
+    }
+
+    &__interest-text{
+    }
+
+    &__input-rows{}
+
+    &__row{
+      &--btn{
+      }
+    }
+  }
+
+  .popup-input{
+    &__label{
+      &--name{
+      }
+
+      &--tel{
+      }
+    }
+
+    &__label-text{
+    }
+
+    &__input{
+      &:focus{
+      }
+    }
+
+    &__btn{}
+  }
+}
+
+@media screen and (max-width: 1200px){
+  .header{
+    &__phone-wrap{
+      margin-right: 0;
+    }
+
+    &__order-call{
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 1010px) {
+  .fixed-header{
+    padding: 0;
+  }
+
+  .title-block{
+    padding: 0;
+    height: 770px;
+
+    &__parking{
+      display: none;
+    }
+
+    &__text-wrap{
+      padding-top: 180px;
+      flex-direction: column;
+      margin: 0 auto;
+      max-width: none;
+      height: ~'calc(100% - 270px)';
+    }
+    
+    &__title{
+      text-align: center;
+    }
+
+    &__price-wrap{
+      &::after{
+        content: '';
+        position: absolute;
+        bottom: -105px;
+        right: 10px;
+        width: 235px;
+        height: 84px;
+        background: url('/img/discount_under_price.png') no-repeat center / contain;
+      }
+    }
+    
+    &__price{
+      font-size: 92px;
+
+      &::before{
+        left: -8px;
+        bottom: 35px;
+      }
+    }
+
+    &__t{
+      height: 20px;
+    }
+
+    &__col1{
+      max-width: 390px;
+      margin: 0 auto;
+    }
+
+    &__col2{
+      max-width: none;
+    }
+
+    &__installment{
+      padding: 65px 0 0;
+      text-align: center;
+
+      &::before{
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+  .title-popup{
+    margin-top: 25px;
+    width: 100%;
+    margin-left: 0;
+
+    &__wrapper{
+      &::after{
+        display: block;
+      }
+    }
+
+    &__parking{
+      display: block;
+    }
+
+    &__row-2{
+      padding-bottom: 25px;
+    }
+
+    &__close{
+      display: none;
+    }
+  }
+
+  .header{
+    padding: 10px;
+    background-color: #232323;
+
+    &__logo-wrap{
+      padding-bottom: 0;
+    }
+
+    &__feedback-wrap{
+      flex-grow: 1;
+      margin-top: 4px;
+    }
+
+    &__nav-item{
+      &--fixed{
+        &::before{
+          top: -18px;
+        }
+      }
+    }
+
+    &__phone-wrap{
+      margin-right: 0;
+      width: 100%;
+    }
+
+    &__consult{
+      display: none;
+    }
+
+    &__order-call{
+      display: none;
+    }
+
+    &__phone-number{
+      font-size: 16px;
+      margin-top: 0;
+      text-align: center;
+    }
+  }
+
+  .parking{
+    padding: 25px 0 115px;
+    background: url('/img/popup_bg.png') repeat-x bottom / 100% 20px, url("/img/parking_car.jpg") no-repeat 50% ~'calc(100% - 20px)' / 320px, #fff;
+
+    &__top-text{
+      font-size: 60px;
+    }
+
+    &__middle-text{
+      font-size: 37px;
+    }
+
+    &__bottom-text{
+      font-size: 17px;
+    }
+  }
+}
+
+@media screen and (max-width: 940px) {
+  .header{
+    position: relative;
+    padding: 0;
+
+    &__logo-wrap{
+      order: -2;
+      padding: 10px;
+    }
+
+    &__feedback-wrap{
+      margin-top: 0;
+      order: -1;
+    }
+
+    &__nav-item{
+      &--fixed{
+        &::before{
+          display: none;
+        }
+      }
+    }
+
+    &__nav-wrap{
+      display: none;
+      position: absolute;
+      background-color: #232323;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      top: 61px;
+      width: 100%;
+      max-width: none;
+      left: 0;
+      margin: 0;
+    }
+
+    &__nav-list{
+      margin-top: 35px;
+      flex-direction: column;
+      padding-bottom: 55px;
+    }
+
+    &__nav-item{
+      text-align: center;
+
+      &:nth-child(n+2){
+        margin-top: 6px;
+      }
+    }
+
+    &__nav-link{
+      display: block;
+      padding: 10px 0;
+    }
+
+    &__menu-button{
+      display: block;
+    }
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .title-popup{
+    &__wrapper{
+      &::after{
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .title-block{
+    height: 695px;
+    background: url('/img/title_shadow.png') repeat-x top, url(/img/title_bg.jpg?2) ~'47% 15%/1010px no-repeat';
+
+    &__text-wrap{
+      height: ~'calc(100% - 215px)';
+      padding-top: 0;
+    }
+
+    &__price-wrap{
+      margin-top: 25px;
+    }
+
+    &__popup{
+      margin-top: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .title-block{
+    &__price{
+      font-size: 74px;
+      letter-spacing: -0.02em;
+
+      &::before{
+        bottom: 25px;
+        left: -10px;
+        font-size: 18px;
+      }
+    }
+
+    &__price-wrap{
+      width: 300px;
+      padding-left: 20px;
+      margin: 25px auto 0;
+    }
+
+    &__t{
+      height: 16px;
+    }
+
+    &__m{
+      font-size: 18px;
+      margin-top: 2px;
+
+      sup{
+        font-size: 10px;
+      }
+    }
+
+    &__installment{
+      font-size: 16px;
+      line-height: 1.4375;
+
+      &::before{
+        height: 50px;
+        width: 51px;
+        background-size: contain;
+      }
+    }
+  }
+
+  .title-popup{
+    &__wrapper{
+    }
+
+    &__input-rows{
+      padding-left: 0;
+      margin: 20px auto 0;
+    }
+
+    &__row{
+      &--btn{
+        text-align: center;
+      }
+    }
+  }
+
+  .popup-input{
+    &__label{
+      &--name{
+      }
+
+      &--tel{
+      }
+    }
+
+    &__label-text{
+    }
+
+    &__input{
+      background-color: #ffffff;
+
+      &:focus{
+        background-color: #fff;
+      }
+    }
+
+    &__btn{
+    }
+  }
+}

@@ -1,0 +1,164 @@
+/*
+              В этом файле описываются глобальные стили и
+              стили часто повторяющихся блоков используемых в качестве примесей
+
+
+                                      Пример подключения шрифтов
+*/
+@font-face {
+  font-family: 'Gilroy';
+  src: local('Gilroy-LightItalic'), local('GilroyLightItalic'), url('../fonts/Gilroy/Gilroy-LightItalic.otf') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: local('Gilroy-Light'), local('GilroyLight'), url('../fonts/Gilroy/Gilroy-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: local('Gilroy-RegularItalic'), local('GilroyRegularItalic'), url('../fonts/Gilroy/Gilroy-RegularItalic.otf') format('opentype');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: local('Gilroy-Regular'), local('GilroyRegular'), url('../fonts/Gilroy/Gilroy-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: local('Gilroy-RegularItalic'), local('GilroyRegulaItalicr'), url('../fonts/Gilroy/Gilroy-RegularItalic.otf') format('opentype');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: local('Gilroy-Medium'), local('GilroyMedium'), url('../fonts/Gilroy/Gilroy-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: local('Gilroy-SemiBold'), local('GilroySemiBold'), url('../fonts/Gilroy/Gilroy-SemiBold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: local('Gilroy-Bold'), local('GilroyBold'), url('../fonts/Gilroy/Gilroy-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: local('Gilroy-Black'), local('GilroyBlack'), url('../fonts/Gilroy/Gilroy-Black.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: local('Gilroy-Heavy'), local('GilroyHeavy'), url('../fonts/Gilroy/Gilroy-Heavy.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Georgia';
+  src: local('Georgia-Regular'), local('GeorgiaRegular'), url('../fonts/Georgia/georgia.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'RozhaOne';
+  src: local('Rozha-One'), local('RozhaOne'), url('../fonts/RozhaOne/RozhaOne-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: local('Lato-Light'), local('LatoLight'), url('../fonts/lato-300-normal.woff2') format('woff2'), url('../fonts/lato-300-normal.woff') format('woff'), url('../fonts/lato-300-normal.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+.bg{
+  background-color: #ecebe7;
+  background-image: url("/img/bg.jpg");
+}
+
+.no-br{
+  white-space: nowrap;
+  font-size: inherit;
+}
+
+.button{
+  display: inline-block;
+  box-sizing: border-box;
+  height: 45px;
+  padding: 15px 20px;
+  cursor: pointer;
+  user-select: none;
+  color: #1b1b1b;
+  font-size: 14px;
+  letter-spacing: -0.03em;
+  font-weight: 600;
+  background-color: #ddc777;
+  border: none;
+  transition: .3s;
+
+  &:not([class*='load']):hover, &:not([class*='load']):focus{
+    background-color: #f7e089;
+  }
+}
+
+.button-tr{
+  display: inline-block;
+  box-sizing: border-box;
+  height: 46px;
+  padding: 15px 20px;
+  border: 2px solid #232323;
+  cursor: pointer;
+  user-select: none;
+  color: #1b1b1b;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  background-color: transparent;
+  transition: .3s;
+
+  &:not([class*='load']):hover, &:not([class*='load']):focus{
+    border-width: 1px;
+    padding: 16px 21px;
+    color: #000;
+    background-color: rgba(203, 190, 118, 0.41);
+  }
+  
+  &--yellow-br{
+    border: 2px solid #cbbe76;
+
+    &:not([class*='load']):hover, &:not([class*='load']):focus{
+      padding: 16px 21px;
+    }
+  }
+}
+
+.vl{
+  position: fixed;
+  width: 1px;
+  background-color: rgba(0, 0, 0, 0.06);
+  height: 100%;
+  top: 0;
+  left: ~'calc(50% - 550px)';
+}
+
+@media screen and (max-width: 1180px) {
+  .vl{
+    display: none;
+  }
+}
