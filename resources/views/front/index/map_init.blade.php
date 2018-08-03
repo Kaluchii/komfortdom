@@ -162,12 +162,9 @@
                     }
                 ],
                 {name: 'Styled Map'});
-        var prestizh = {lat: 43.233779, lng: 76.921195};
+        var komfort = {lat: 43.233779, lng: 76.921195};
         var popupContent = '<div class="contact-popup">'+
-                '<div class="contact-popup__wrapper">'+
-                '<p class="contact-popup__phone js_popup_phone">{{ $contacts->phone_field }}</p>'+
-                '<p class="contact-popup__addr">{!! $main_block->address_field !!}</p>'+
-                '</div>'+
+                '<img class="contact-popup__logo" src="/img/logo_black.png">'+
                 '</div>';
         var map = new google.maps.Map(document.getElementById('map'), {
             zoom: 16,
@@ -180,7 +177,7 @@
             anchor: new google.maps.Point(1, 1)
         };
         var marker = new google.maps.Marker({
-            position: prestizh,
+            position: komfort,
             icon: image,
             map: map
         });
@@ -188,12 +185,6 @@
             content: popupContent
         });
         infowindow.open(map, marker);
-
-        google.maps.event.addListenerOnce(map, 'idle', function(){
-            if(window.jQuery){
-                $('.js_popup_phone').text( $('.js_top_phone').text() );
-            }
-        });
 
         map.mapTypes.set('styled_map', styledMapType);
         map.setMapTypeId('styled_map');

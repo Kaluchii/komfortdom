@@ -39,8 +39,6 @@ $(document).ready(function () {
         return s.join(dec);
     }
 
-    $(".js_radial").knob();
-
     var sections = $('.header__nav-item--fixed .header__nav-link'),
         $window = $(window),
         offset = $window.height() / 2.5;
@@ -79,11 +77,6 @@ $(document).ready(function () {
     });
 
     $window.on('load resize', function () {
-        if ($window.width() > 1010) {
-            $('.header__logo').attr('src', '/img/logo.png');
-        } else {
-            $('.header__logo').attr('src', '/img/logo_mob.png');
-        }
         if ($window.width() > 940) {
             $('.js_nav_wrap').attr('style', '');
             $('.js_fixed_nav_wrap').attr('style', '');
@@ -134,7 +127,6 @@ $(document).ready(function () {
         flat_category_id = $(this).data('id');
         $('.js_area_btn').closest('.layout-choice__btns-item').hide().removeClass('visible');
         $('.js_area_btn' + '.' + 'flat' + flat_category_id).closest('.layout-choice__btns-item').show().addClass('visible');
-        $('.layout__flat-name').text(flatsObj[flat_category_id]['singularly']);
         $('.layout-choice__btns-item.visible:first .js_area_btn').click();
         $('.js_rooms_btn').removeClass('is-active').closest('.layout-choice__btns-item').removeClass('is-active');
         $(this).addClass('is-active').closest('.layout-choice__btns-item').addClass('is-active');
@@ -225,55 +217,5 @@ $(document).ready(function () {
     $('.js_open_fotorama').on('click', function () {
         fotorama.show($(this).data('img'));
         fotorama.requestFullScreen();
-    });
-
-
-    var $stagesFotorama = $('.js_stages__fotorama').fotorama({
-        navwidth: '90%'
-    });
-    // 2. Get the API object.
-    var stagesFotorama = $stagesFotorama.data('fotorama');
-
-    $('.js_stage_btn').on('click', function () {
-        if (!$(this).hasClass('is-active')) {
-
-            var thisId = $(this).data('id');
-
-            $('.js_stages__fotorama, .js_give_stage_text').animate({opacity: "toggle"}, 300);
-            var imageArray = [];
-            for (var stageImg in stageObj[thisId]['images']){
-                var imageSrc = stageObj[thisId]['images'][stageImg].src;
-                imageArray.push({img: imageSrc});
-            }
-            setTimeout(function () {
-                $('.js_give_stage_text').html(stageObj[thisId]['text']);
-                stagesFotorama.load(imageArray);
-            }, 300);
-
-            $('.js_stages__fotorama, .js_give_stage_text').animate({opacity: "toggle"}, 300);
-            var left = $(this).width() / 2;
-            for(var i = 0; i < $(this).index(); i++){
-                left += $('.js_stage_btn').eq(i).width() + 10;
-            }
-            $('.stages__list').css('left', $window.width() / 2 - left);
-            $('.js_stage_btn.is-active').removeClass('is-active');
-
-            $(this).addClass('is-active');
-        }
-    });
-
-    $('.js_stage_btn:first-child').click();
-
-    $window.on('resize', function () {
-        var activeBtn = $('.js_stage_btn.is-active');
-        var left = activeBtn.width() / 2;
-        for(var i = 0; i < activeBtn.index(); i++){
-            left += $('.js_stage_btn').eq(i).width() + 10;
-        }
-        $('.stages__list').css('left', $window.width() / 2 - left);
-
-        if ($window.width() > 1024){
-            $('.js-top-btn').css('display', 'none');
-        }
     });
 });

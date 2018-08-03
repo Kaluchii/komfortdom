@@ -14,7 +14,6 @@ class AdminController extends Controller
         $this->extract = $ext;
         $this->extract->tuneSelection('slider')->sortBy('sorter','DESC');
         $this->extract->tuneSelection('layout')->sortBy('sorter','DESC');
-        $this->extract->tuneSelection('stage_images')->sortBy('sorter','DESC');
     }
 
     public function getIndex(){
@@ -39,20 +38,6 @@ class AdminController extends Controller
         $gallery = $this->extract->getBlock('gallery');
         return view('back.blocks.gallery', [
             'gallery' => $gallery
-        ]);
-    }
-
-    public function getStages(){
-        $stages = $this->extract->getBlock('stages');
-        return view('back.blocks.stages', [
-            'stages' => $stages
-        ]);
-    }
-
-    public function getStagesItem( $id ){
-        $stages_item = $this->extract->getGroupItem('dom_stages', $id);
-        return view('back.groups.dom_stages.dom_stages', [
-            'item' => $stages_item
         ]);
     }
 

@@ -23,11 +23,6 @@
                 </a>
             </li>
             <li>
-                <a href="/adm/stages">
-                    <i class="fa fa-image"></i> <span>Этапы строительства</span>
-                </a>
-            </li>
-            <li>
                 <a href="/adm/contacts">
                     <i class="fa fa-globe"></i> <span>Контакты</span>
                 </a>

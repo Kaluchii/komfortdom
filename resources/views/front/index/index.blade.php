@@ -98,15 +98,6 @@
             </div>
             <div class="about__in-detail in-detail">
                 <div class="in-detail__triad">
-                    <div class="in-detail__item detail-item detail-item--biggest">
-                        <div class="detail-item__img-wrap"><img src="{{$about->image0->link_field}}?{{$about->image0->cache_index}}" alt="{{$about->image0->alt_field}}" height="540" width="640" class="detail-item__img"></div>
-                        <div class="detail-item__text-wrap">
-                            <h3 class="detail-item__title">{!! $about->title0_field !!}</h3>
-                            <p class="detail-item__text">{!! $about->text0_field !!}</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="in-detail__triad">
                     <div class="in-detail__item detail-item">
                         <div class="detail-item__img-wrap"><img src="{{$about->image1->link_field}}?{{$about->image1->cache_index}}" alt="{{$about->image1->alt_field}}" height="400" width="400" class="detail-item__img"></div>
                         <div class="detail-item__text-wrap">
@@ -114,50 +105,17 @@
                             <p class="detail-item__text">{!! $about->text1_field !!}</p>
                         </div>
                     </div>
-                    <div class="in-detail__item detail-item detail-item--middle">
+                    <div class="in-detail__item detail-item">
                         <div class="detail-item__img-wrap"><img src="{{$about->image2->link_field}}?{{$about->image2->cache_index}}" alt="{{$about->image2->alt_field}}" height="330" width="330" class="detail-item__img"></div>
                         <div class="detail-item__text-wrap">
                             <h3 class="detail-item__title">{!! $about->title2_field !!}</h3>
                             <p class="detail-item__text">{!! $about->text2_field !!}</p>
                         </div>
                     </div>
-                    <div class="in-detail__item detail-item detail-item--small">
+                    <div class="in-detail__item detail-item">
                         <div class="detail-item__text-wrap">
                             <h3 class="detail-item__title">{!! $about->title3_field !!}</h3>
                             <p class="detail-item__text">{!! $about->text3_field !!}</p>
-                        </div>
-                        <div class="detail-item__img-wrap"><img src="{{$about->image3->link_field}}?{{$about->image3->cache_index}}" alt="{{$about->image3->alt_field}}" height="170" width="180" class="detail-item__img"></div>
-                    </div>
-                </div>
-                <div class="in-detail__triad in-detail__triad--right-align">
-                    <div class="in-detail__item detail-item">
-                        <div class="detail-item__img-wrap"><img src="{{$about->image4->link_field}}?{{$about->image4->cache_index}}" alt="{{$about->image4->alt_field}}" height="400" width="400" class="detail-item__img"></div>
-                        <div class="detail-item__text-wrap">
-                            <h3 class="detail-item__title">{!! $about->title4_field !!}</h3>
-                            <p class="detail-item__text">{!! $about->text4_field !!}</p>
-                        </div>
-                    </div>
-                    <div class="in-detail__item detail-item detail-item--middle">
-                        <div class="detail-item__img-wrap"><img src="{{$about->image5->link_field}}?{{$about->image5->cache_index}}" alt="{{$about->image5->alt_field}}" height="330" width="330" class="detail-item__img"></div>
-                        <div class="detail-item__text-wrap">
-                            <h3 class="detail-item__title">{!! $about->title5_field !!}</h3>
-                            <p class="detail-item__text">{!! $about->text5_field !!}</p>
-                        </div>
-                    </div>
-                    <div class="in-detail__item detail-item detail-item--small">
-                        <div class="detail-item__text-wrap">
-                            <h3 class="detail-item__title">{!! $about->title6_field !!}</h3>
-                            <p class="detail-item__text">{!! $about->text6_field !!}</p>
-                        </div>
-                        <div class="detail-item__img-wrap"><img src="{{$about->image6->link_field}}?{{$about->image6->cache_index}}" alt="{{$about->image6->alt_field}}" height="170" width="180" class="detail-item__img"></div>
-                    </div>
-                </div>
-                <div class="in-detail__triad">
-                    <div class="in-detail__item detail-item">
-                        <div class="detail-item__img-wrap"><img src="{{$about->image7->link_field}}?{{$about->image7->cache_index}}" alt="{{$about->image7->alt_field}}" height="400" width="400" class="detail-item__img"></div>
-                        <div class="detail-item__text-wrap">
-                            <h3 class="detail-item__title">{!! $about->title7_field !!}</h3>
-                            <p class="detail-item__text">{!! $about->text7_field !!}</p>
                             <div class="detail-item__places places">
                                 <div class="places__item">
                                     <div class="places__img-wrap">
@@ -197,6 +155,7 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="detail-item__img-wrap"><img src="{{$about->image3->link_field}}?{{$about->image3->cache_index}}" alt="{{$about->image3->alt_field}}" height="170" width="180" class="detail-item__img"></div>
                     </div>
                 </div>
             </div>
@@ -236,33 +195,6 @@
                         <li class="mobile-gallery__item"><img class="mobile-gallery__img js_open_fotorama" data-img="{{$i}}" src="{{ $slider_arr[$i] }}" alt=""></li>
                     @endfor
                 </ul>
-            </div>
-        </div>
-    </section>
-    <section class="feedback">
-        <div class="feedback__wrapper">
-            <h2 class="feedback__title">Хотите посмотреть поближе?<br>Приходите в&nbsp;гости!</h2>
-            <div class="feedback__input-rows form-id" id="feedback_call">
-                <input type="hidden" name="form" class="form-input" value="call">
-                <div class="feedback__row form-row">
-                    <div class="form-row__validation-wrap feedback-input">
-                        <label class="feedback-input__label feedback-input__label--name" for="feedback_name"><span class="feedback-input__label-text">Имя</span></label>
-                        <input type="text" name="client_name" id="feedback_name" placeholder="Введите имя" autocomplete="false" required class="form-row__input form-input feedback-input__input">
-                        <div class="form-row__tooltip-wrap form-row__tooltip-wrap--popup-none"><p class="form-row__tooltip form-row__tooltip--border">Как к вам обращаться</p></div>
-                    </div>
-                </div>
-
-                <div class="feedback__row form-row">
-                    <div class="form-row__validation-wrap feedback-input">
-                        <label class="feedback-input__label feedback-input__label--tel" for="feedback_tel"><span class="feedback-input__label-text">Телефон</span></label>
-                        <input type="tel" data-require="true" id="feedback_tel" class="form-row__input form-input feedback-input__input feedback-input__input--tel" maxlength="25" data-mask="(000) 000-00-00" name="phone">
-                        <div class="form-row__tooltip-wrap form-row__tooltip-wrap--popup-none"><p class="form-row__tooltip form-row__tooltip--border">Телефонный номер для связи</p></div>
-                        <label class="feedback-input__num-label" for="feedback_tel">+7</label>
-                    </div>
-                </div>
-                <div class="feedback__row feedback__row--btn">
-                    <input type="submit" value="ОТПРАВИТЬ ЗАЯВКУ" class="feedback__btn form-row__send-form button send-form">
-                </div>
             </div>
         </div>
     </section>
@@ -350,37 +282,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="stages">
-        <div class="stages__top-wrapper">
-            <div class="stages__col1">
-                <h2 class="stages__title" id="stages">{{ $stages->block_title_field }}</h2>
-                <p class="stages__text">{{ $stages->text_field }}</p>
-            </div>
-            {{--<div class="stages__col2">
-                <div class="stages__radial-col">
-                    <input value="{{ $stages->percent_field }}" data-width="100%" data-thickness=".04" type="text" class="stages__radial js_radial" data-bgColor="#FFFFFF" readonly data-fgColor="#ddc777" data-displayInput="false" data-rotation="anticlockwise">
-                </div>
-                <div class="stages__percent-col">
-                    <p class="stages__percent-text">Готовность<br>жилого комплекса</p>
-                    <p class="stages__percent-digit-wrap"><span class="stages__percent-digit">{{ $stages->percent_field }}</span>%</p>
-                </div>
-            </div>--}}
-        </div>
-        <div class="stages__date-list-wrapper">
-            <ul class="stages__list">
-                @foreach($stages->dom_stages_group as $stage)
-                    <li class="stages__item js_stage_btn" data-id="{{$stage->id_field}}"><button class="stages__item-btn">{{$stage->dom_stages_name_field}}</button></li>
-                @endforeach
-            </ul>
-        </div>
-        <div class="stages__stage-wrapper">
-            <div class="stages__fotorama js_stages__fotorama fotorama" data-auto="false" data-ratio="820/490"
-                 data-nav="none" data-allowfullscreen="true"
-                 data-loop="true" data-transition="crossfade">
-            </div>
-            <p class="stages__stage-text js_give_stage_text"></p>
         </div>
     </section>
     <section class="contacts">

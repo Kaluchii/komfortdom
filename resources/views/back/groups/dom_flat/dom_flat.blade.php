@@ -1,6 +1,6 @@
 @extends('back.layout')
 @section('content')
-    @include('back.content-top', ['title' => 'Квартиры'])
+    @include('back.content-top', ['title' => 'Этаж'])
 
     <div class="box box box-info">
 
@@ -10,22 +10,11 @@
 
         <div class="box-body">
             <div class="form-group">
-                <label>Название квартир</label>
+                <label>Номер этажа</label>
                 <input class="form-control string"
                        type="text" placeholder=""
                        value="{{$item->dom_flat_name_field}}"
                        data-name="dom_flat_name"
-                       data-type="string"
-                       data-block="dom_flat"
-                       data-id="{{$item->id_field}}">
-            </div>
-
-            <div class="form-group">
-                <label>Название квартиры в единственном числе</label>
-                <input class="form-control string"
-                       type="text" placeholder=""
-                       value="{{$item->singularly_field}}"
-                       data-name="singularly"
                        data-type="string"
                        data-block="dom_flat"
                        data-id="{{$item->id_field}}">

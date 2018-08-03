@@ -7,9 +7,9 @@ return [
     ],
 
     'about' => [
-        'string' => ['block_title', 'title0', 'title1', 'title2', 'title3', 'title4', 'title5', 'title6', 'title7'],
-        'text' => ['text', 'text0', 'text1', 'text2', 'text3', 'text4', 'text5', 'text6', 'text7'],
-        'image' => ['image0', 'image1', 'image2', 'image3', 'image4', 'image5', 'image6', 'image7']
+        'string' => ['block_title', 'title1', 'title2', 'title3'],
+        'text' => ['text', 'text1', 'text2', 'text3'],
+        'image' => ['image1', 'image2', 'image3']
     ],
 
     'gallery' => [
@@ -20,37 +20,22 @@ return [
     'flats' => [
         'string' => ['block_title'],
         'text' => ['text'],
+        'file' => ['layouts'],
         'groups' => [
             'dom_flat' => [
-                'string' => ['dom_flat_name', 'singularly']
+                'string' => ['dom_flat_name']
             ],
             'layout' => [
                 'image' => ['layout_scheme'],
-                'string' => ['block', 'floor'],
+                'string' => ['floor'],
                 'float' => ['area', 'meter_cost'],
                 'dom_flat' => ['superior']
             ]
         ]
     ],
 
-    'stages' => [
-        'string' => ['block_title'],
-        'text' => ['text'],
-        'int' => ['percent'],
-        'groups' => [
-            'dom_stages' => [
-                'string' => ['dom_stages_name'],
-                'text' => ['text']
-            ],
-            'stage_images' => [
-                'image' => ['stage_photo'],
-                'dom_stages' => ['superior']
-            ]
-        ]
-    ],
-
     'contacts' => [
-        'string' => ['block_title', 'phone', 'mail', 'address'],
+        'string' => ['block_title', 'phone', 'work_time', 'address'],
         'text' => ['text']
      ],
 
