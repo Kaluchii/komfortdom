@@ -76,9 +76,14 @@ gulp.task('style', function () {
 //======================================================================================================================
 
 gulp.task('compress', function() {
-    gulp.src(['./dev/js/*.js', './js/*.js'])
-        .pipe(minify())
-        .pipe(gulp.dest('dist'))
+    gulp.src('./dev/js/*.js')
+        .pipe(minify({
+            ext:{
+                src:'-debug.js',
+                min:'.js'
+            }
+        }))
+        .pipe(gulp.dest('./js'))
 });
 
 
