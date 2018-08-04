@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/img/fav.png" type="image/png">
 
+    {!! $scripts->before_head_close_field !!}
+
     @include('front.styles')
     @yield('styles')
-    {!! $scripts->before_head_close_field !!}
     @yield('meta')
 </head>
 <body class="bg">
@@ -32,6 +33,5 @@
     @yield('scripts')
 
     {!! $scripts->before_close_field !!}
-
 </body>
 </html>

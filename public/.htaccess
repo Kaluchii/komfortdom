@@ -22,6 +22,10 @@
 #    RewriteCond %{SERVER_PORT} !^443$
 #    RewriteRule .* https://%{SERVER_NAME}%{REQUEST_URI} [R=301,L]
 
+    RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.php\ HTTP/
+    RewriteRule ^index\.php$ https://%{SERVER_NAME} [L,R=301]
+
+
     # Redirect Trailing Slashes If Not A Folder...
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule ^(.*)/$ /$1 [L,R=301]

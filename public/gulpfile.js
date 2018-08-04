@@ -11,6 +11,7 @@ var gulp         = require('gulp'),
 
     svgmin       = require('gulp-svgmin'),
     imagemin     = require('gulp-imagemin'),
+    minify       = require('gulp-minify');
 
     changeCase   = require('change-case'),
     watch        = require('gulp-watch'),
@@ -31,8 +32,10 @@ var gulp         = require('gulp'),
 // пути до файлов
 var config         = '/dev/config',
     dev_css        = 'dev/less/',
+    dev_js         = 'dev/js/',
     dev_img        = 'dev/img/',
     production_css = './css/',
+    production_js  = './js/',
     production_img = './img/',
     html           = '../resources/views/front/';
 // Параметры для галпа
@@ -63,7 +66,7 @@ gulp.task('style', function () {
         .pipe(plumber())
         .pipe(_if(isProduction, sourcemaps.init()))// Если передан ключ --production то sourcemap не пишется.
         .pipe(less())
-        .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie9', 'opera 12.1', 'chrome', 'ff', 'ios'))
+        .pipe(autoprefixer('last 20 version', 'safari 5', 'ie 8', 'ie9', 'opera 12.1', 'chrome', 'ff', 'ios'))
         .pipe(csscomb('./dev/config/.csscomb.json'))
         .pipe(_if(!isProduction, cssmin())) // Если передан ключ --production то css файл будет минимизирован и оптимизирован
         .pipe(_if(isProduction, sourcemaps.write() )) // Если передан ключ --production то sourcemap не пишется.
@@ -72,7 +75,11 @@ gulp.task('style', function () {
 });
 //======================================================================================================================
 
-
+gulp.task('compress', function() {
+    gulp.src(['./dev/js/*.js', './js/*.js'])
+        .pipe(minify())
+        .pipe(gulp.dest('dist'))
+});
 
 
 //======================================================================================================================
