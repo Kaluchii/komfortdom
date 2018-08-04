@@ -18,13 +18,11 @@
             </div>
             <div class="form-group">
                 <label>Адрес местоположения</label>
-                <input class="form-control string"
-                       type="text" placeholder=""
-                       value="{{$contacts->address_field}}"
-                       data-name="address"
-                       data-type="string"
-                       data-block="contacts"
-                       data-id="0">
+                <textarea class="form-control text textarea--small" data-reg="true"
+                          data-name="address"
+                          data-type="string"
+                          data-block="contacts"
+                          data-id="0">{{$contacts->address_field}}</textarea>
             </div>
             <div class="form-group">
                 <label>Телефон</label>

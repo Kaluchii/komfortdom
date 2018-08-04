@@ -17,7 +17,7 @@
                        data-id="0">
             </div>
             <div class="form-group">
-                <label>Текст под заголовком</label>
+                <label>Текст рядом с заголовком</label>
                 <textarea class="form-control text"
                           data-name="text" data-reg="true"
                           data-type="text"

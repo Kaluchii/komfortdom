@@ -47,7 +47,7 @@
   //text-align: left;
   z-index: 1045;
   height: 100%;
-  min-height: 600px;
+  min-height: 500px;
 }
 
 .mfp-inline-holder .mfp-content,
@@ -129,7 +129,7 @@ button::-moz-focus-inner {
   background: #fff url("/img/close.png") no-repeat center;
   position: absolute;
   right: 5%;
-  top: -18%;
+  top: -8%;
   text-decoration: none;
   text-align: center;
   //padding: 0 0 18px 7px;
@@ -379,4 +379,9 @@ img.mfp-img {
   .mfp-arrow-right {
     -webkit-transform-origin: 100%;
     transform-origin: 100%; }
+}
+@media all and (max-width: 420px) {
+  .mfp-close {
+    top: -15%;
+  }
 }

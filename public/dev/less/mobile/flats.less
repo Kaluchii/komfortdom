@@ -4,15 +4,6 @@
       padding: 0 40px;
     }
 
-    &__title{
-      &::before{
-        top: -30px;
-        left: 0;
-        color: #c2ae67;
-        transform: none;
-      }
-    }
-
     &__col1{
       padding-left: 0;
     }
@@ -31,6 +22,10 @@
       position: static;
     }
 
+    &__download-plan{
+      top: 50px;
+    }
+
     &__btns-list{
       margin-top: 13px;
     }
@@ -41,6 +36,7 @@
   .flats{
     &__wrapper{
       padding-top: 80px;
+      padding-bottom: 80px;
     }
 
     &__top-wrapper{
@@ -59,10 +55,6 @@
   .layout{
     flex-direction: column;
 
-    &__img-wrapper{
-      //max-width: none;
-    }
-
     &__feedback-info-wrapper{
       max-width: none;
       flex-direction: row-reverse;
@@ -71,8 +63,19 @@
     }
 
     &__info{
+      width: 70%;
       border-bottom: none;
-      padding-top: 30px;
+    }
+
+    &__info-row{
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+      padding: 20px 20px 25px 30px;
+    }
+
+    &__feedback{
+      flex-grow: 0;
     }
   }
 }
@@ -95,6 +98,7 @@
 
     &__wrapper{
       padding-top: 70px;
+      padding-bottom: 60px;
     }
 
     &__col1{
@@ -147,30 +151,22 @@
       box-sizing: border-box;
       border-bottom: 1px solid rgba(0, 0, 0, 0.08);
       border-top: 1px solid rgba(0, 0, 0, 0.08);
-      padding-top: 30px;
       text-align: center;
     }
 
-    &__flat-name{
-      margin: 0 auto;
-    }
-
     &__info-row{
-      margin: 12px auto 0;
       justify-content: center;
-    }
-
-    &__price-wrap{
-      margin-top: 15px;
     }
   }
 
   .layout-feedback{
     padding: 30px 10px 55px;
     margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
 
     &__input-rows{
-      margin-top: 20px;
+      margin: 20px auto 0;
     }
 
     &__title{
@@ -196,6 +192,14 @@
   .flats{
     &__top-wrapper{
       padding: 0 10px;
+    }
+  }
+
+  .layout-choice{
+    &__button{
+      &--area{
+        width: 76px;
+      }
     }
   }
 }

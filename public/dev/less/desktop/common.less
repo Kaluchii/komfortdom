@@ -86,10 +86,15 @@
   font-weight: 300;
   font-style: normal;
 }
+@font-face {
+  font-family: 'Tenge';
+  src: local('Tenge'), url('../fonts/Tenge/tenge.woff2') format('woff2'), url('../fonts/Tenge/tenge.woff') format('woff'), url('../fonts/Tenge/tenge.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
 
 .bg{
-  background-color: #ecebe7;
-  background-image: url("/img/bg.jpg");
+  background-color: #e3c471;
 }
 
 .no-br{
@@ -100,15 +105,15 @@
 .button{
   display: inline-block;
   box-sizing: border-box;
-  height: 45px;
-  padding: 15px 20px;
+  height: 40px;
+  padding: 13px 20px;
   cursor: pointer;
   user-select: none;
   color: #1b1b1b;
   font-size: 14px;
   letter-spacing: -0.03em;
   font-weight: 600;
-  background-color: #ddc777;
+  background-color: #e3c470;
   border: none;
   transition: .3s;
 
@@ -121,11 +126,11 @@
   display: inline-block;
   box-sizing: border-box;
   height: 46px;
-  padding: 15px 20px;
-  border: 2px solid #232323;
+  padding: 14px 20px;
+  border: 2px solid #cbb26f;
   cursor: pointer;
   user-select: none;
-  color: #1b1b1b;
+  color: #ffffff;
   font-size: 12px;
   letter-spacing: 0.1em;
   font-weight: 600;
@@ -134,31 +139,16 @@
 
   &:not([class*='load']):hover, &:not([class*='load']):focus{
     border-width: 1px;
-    padding: 16px 21px;
-    color: #000;
+    padding: 15px 21px;
+    color: #fff;
     background-color: rgba(203, 190, 118, 0.41);
   }
   
   &--yellow-br{
-    border: 2px solid #cbbe76;
+    border: 3px solid #f3e694;
 
     &:not([class*='load']):hover, &:not([class*='load']):focus{
-      padding: 16px 21px;
+      padding: 16px 22px;
     }
-  }
-}
-
-.vl{
-  position: fixed;
-  width: 1px;
-  background-color: rgba(0, 0, 0, 0.06);
-  height: 100%;
-  top: 0;
-  left: ~'calc(50% - 550px)';
-}
-
-@media screen and (max-width: 1180px) {
-  .vl{
-    display: none;
   }
 }

@@ -1,13 +1,13 @@
 <div class="box">
     <div class="box-header with-border">
-        <h3 class="box-title">Квартира {{$item->sorter_field}}</h3>
+        <h3 class="box-title">Помещение {{$item->sorter_field}}</h3>
         <button type="submit" class="btn btn-primary pull-right remove-flat-item" data-id="{{$item->id_field}}"
                 data-block="layout">Удалить</button>
     </div>
     <div class="box-body">
 
         <div class="form-group">
-            <label>Размер квартиры</label>
+            <label>Размер помещения</label>
             <input class="form-control float"
                    type="number" placeholder=""
                    value="{{$item->area_field}}"
@@ -18,7 +18,7 @@
         </div>
 
         <div class="form-group">
-            <label>Стоимость 1 м² площади квартиры в долларах</label>
+            <label>Стоимость 1 м² площади помещения в долларах</label>
             <input class="form-control float"
                    type="number" placeholder=""
                    value="{{$item->meter_cost_field}}"

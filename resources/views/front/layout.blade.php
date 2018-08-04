@@ -22,6 +22,12 @@
     @include('front.footer')
     @yield('footer')
 
+    <div class="hide">
+        @include('front.popups.call')
+        @include('front.popups.thank')
+        <a href="#thanks" class="thank"></a>
+    </div>
+
     @include('front.scripts')
     @yield('scripts')
 

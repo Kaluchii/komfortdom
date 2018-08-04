@@ -1,0 +1,178 @@
+.feedbacks{
+  background-color: #e6d082;
+  text-align: center;
+  overflow: hidden;
+  padding: 70px 0 115px;
+
+  &__wrapper{
+    max-width: 540px;
+    margin: 0 auto;
+    position: relative;
+
+    &::before{
+      content: '';
+      position: absolute;
+      top: -114%;
+      left: -80%;
+      width: 1396px;
+      height: 1396px;
+      background: url("/img/feedbacs_elipses.png") no-repeat;
+      z-index: 0;
+      transform: scale(0);
+      transition: .8s;
+    }
+
+    &--btn{}
+
+    &.display{
+      &::before{
+        transform: scale(1);
+      }
+
+      .feedbacks{
+        &__title{
+          top: 0;
+          opacity: 1;
+        }
+
+        &__sub-title{
+          top: 0;
+          opacity: 1;
+        }
+
+        &__input-rows{
+          top: 0;
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__title{
+    position: relative;
+    top: -25px;
+    opacity: 0;
+    transition: .6s .6s;
+    margin: 0 auto;
+    font-size: 48px;
+    color: #201306;
+    letter-spacing: 0.025em;
+  }
+
+  &__sub-title{
+    position: relative;
+    max-width: 390px;
+    top: -25px;
+    opacity: 0;
+    transition: .6s 1s;
+    margin: 20px auto 0;
+    font-size: 18px;
+    letter-spacing: 0.02em;
+    line-height: 1.5;
+    color: #201306;
+  }
+
+  &__input-rows{
+    margin: 25px auto 0;
+    max-width: 290px;
+    position: relative;
+    top: -25px;
+    opacity: 0;
+    transition: .6s 1.4s;
+  }
+
+  &__input-wrapper{
+    margin-top: 15px;
+  }
+
+  &__btn{
+    margin-top: 10px;
+    border: none;
+    text-align: center;
+    width: 178px;
+    font-size: 14px;
+    color: #2f2013;
+    background: rgba(247,236,153,1);
+    background: -moz-linear-gradient(top, rgba(247,236,153,1) 0%, rgba(226,200,124,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(247,236,153,1)), color-stop(100%, rgba(226,200,124,1)));
+    background: -webkit-linear-gradient(top, rgba(247,236,153,1) 0%, rgba(226,200,124,1) 100%);
+    background: -o-linear-gradient(top, rgba(247,236,153,1) 0%, rgba(226,200,124,1) 100%);
+    background: -ms-linear-gradient(top, rgba(247,236,153,1) 0%, rgba(226,200,124,1) 100%);
+    background: linear-gradient(to bottom, rgba(247,236,153,1) 0%, rgba(226,200,124,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7ec99', endColorstr='#e2c87c', GradientType=0 );
+    transition: .3s;
+
+    &:not([class*=load]):hover{
+      background: rgba(227,202,125,1) no-repeat;
+      background: -moz-linear-gradient(top, rgba(227,202,125,1) 0%, rgba(243,216,137,1) 100%);
+      background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(227,202,125,1)), color-stop(100%, rgba(243,216,137,1)));
+      background: -webkit-linear-gradient(top, rgba(227,202,125,1) 0%, rgba(243,216,137,1) 100%);
+      background: -o-linear-gradient(top, rgba(227,202,125,1) 0%, rgba(243,216,137,1) 100%);
+      background: -ms-linear-gradient(top, rgba(227,202,125,1) 0%, rgba(243,216,137,1) 100%);
+      background: linear-gradient(to bottom, rgba(227,202,125,1) 0%, rgba(243,216,137,1) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#E3CA7D', endColorstr='#F3D889', GradientType=0 );
+    }
+  }
+}
+
+
+.feedbacks-input{
+  position: relative;
+
+  &__label{
+    background-color: transparent;
+    font-size: 16px;
+    position: absolute;
+    height: 46px;
+    width: 50px;
+    color: #201306;
+
+    &--name{}
+
+    &--tel{
+      border-right: 1px solid rgba(204, 204, 204, 0.5);;
+    }
+
+    &--flats{
+      color: #ffffff;
+    }
+  }
+
+  &__label-text{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 20px;
+    font-size: 14.5px;
+    text-align: center;
+    color: inherit;
+  }
+
+  &__input{
+    background-color: #f9f7f4;
+    border: 1px solid #e6e1dc;
+    padding: 0 30px 0 70px;
+    font-size: 16px;
+    box-sizing: border-box;
+    height: 46px;
+    width: 100%;
+    border-radius: 23px;
+    color: #201306;
+    transition: .3s;
+
+    &:focus{
+      border-color: #c4b19e;
+    }
+
+    &--flats{
+      background-color: rgba(249, 247, 244, 0.4);
+      color: #ffffff;
+      opacity: .75;
+
+      &:focus{
+        border-color: #ffffff;
+        opacity: 1;
+      }
+    }
+  }
+}

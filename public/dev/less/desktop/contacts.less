@@ -1,7 +1,5 @@
 .contacts{
   &__wrapper{
-    max-width: 1560px;
-    margin: 0 auto;
     height: 550px;
     display: flex;
   }
@@ -16,7 +14,7 @@
 
   &__contact-block-wrapper{
     padding: 0 20px 0 40px;
-    max-width: 470px;
+    max-width: 450px;
     margin-left: auto;
   }
 
@@ -25,50 +23,65 @@
     font-size: 40px;
     line-height: 1.25;
     color: #ffffff;
+  }
+
+  &__address{
     position: relative;
+    margin-top: 55px;
+    padding-left: 35px;
+    line-height: 1.5;
+    color: #ffffff;
 
     &::before{
-      content: 'КОНТАКТЫ';
+      content: '';
       position: absolute;
-      top: 0;
-      left: -99px;
-      font-size: 12px;
-      color: #ddc777;
-      transform: rotate(-90deg) translateX(-50%);
-      font-family: 'Gilroy';
-      font-weight: 300;
-    }
-  }
-
-  &__text{
-    margin-top: 15px;
-    max-width: 385px;
-    color: rgba(255, 255, 255, 0.3);
-    line-height: 1.571428571;
-  }
-
-  &__input-rows{
-    padding-left: 5px;
-    margin-top: 20px;
-    max-width: 300px;
-  }
-
-  &__row{
-    margin-top: 50px;
-
-    &--btn{
-      margin-top: 30px;
+      left: 0;
+      width: 18px;
+      height: 23px;
+      background-image: url('/img/location.png');
     }
   }
 
   &__phone{
-    &:before{
+    position: relative;
+    margin-top: 20px;
+    padding-left: 40px;
+    font-size: 18px;
+    color: #ffffff;
+
+    &::before{
+      content: '';
+      position: absolute;
+      top: 6px;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      background-image: url('/img/phone.png');
     }
   }
 
-  &__address{
-    &:before{
-    }
+  &__text{
+    margin-top: 35px;
+    max-width: 310px;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.571428571;
+    font-weight: 300;
+    font-style: italic;
+  }
+
+  &__work-time{
+    margin-top: 40px;
+  }
+
+  &__work-time-title{
+    color: #ffffff;
+  }
+
+  &__work-time-text{
+    margin-top: 10px;
+    font-size: 18px;
+    line-height: 1.2222;
+    color: #e3c470;
   }
 
   &__map-wrapper{
@@ -86,158 +99,43 @@
   max-width: none;
 }
 
-.contacts-input{
-  position: relative;
-
-  &__label{
-    background-color: transparent;
-    position: absolute;
-    color: #ddc777;
-    font-size: 14px;
-  }
-
-  &__label-text{
-    position: absolute;
-    top: -17px;
-    left: 0;
-    font-size: inherit;
-    text-align: center;
-    color: inherit;
-  }
-
-  &__num-label{
-    position: absolute;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    font-size: 16px;
-    bottom: 0;
-    height: 35px;
-    box-sizing: border-box;
-    color: rgba(255, 255, 255, 0.2);
-    transition: .3s;
-  }
-
-  &__input{
-    background-color: transparent;
-    border: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    font-size: 16px;
-    box-sizing: border-box;
-    height: 50px;
-    width: 100%;
-    letter-spacing: 0.04em;
-    color: rgba(255, 255, 255, 0.5);
-    transition: .3s;
-
-    &::placeholder{
-      color: rgba(255, 255, 255, 0.2);
-      transition: .3s;
-    }
-
-    &:focus{
-      border-color: rgba(255, 255, 255, 0.6);
-      color: rgba(255, 255, 255, 0.7);
-
-      &::placeholder{
-        color: rgba(255, 255, 255, 0.4);
-      }
-
-      & ~ .contacts-input__num-label{
-        border-color: rgba(255, 255, 255, 0.6);
-        color: rgba(255, 255, 255, 0.7);
-      }
-    }
-
-    &--tel{
-      margin-left: 35px;
-      width: ~'calc(100% - 35px)';
-    }
-  }
-
-  &__btn{}
-}
-
-.form-row__validation-wrap.error:not(.filling) .form-row__input.contacts-input__input{
-  border: none;
-  border-bottom: 1px solid rgba(214, 81, 55, 0.5);
-  background: transparent;
-
-  & ~ .contacts-input__num-label{
-    border-color: rgba(214, 81, 55, 0.5);
-    color: rgba(214, 81, 55, 0.5);
-  }
-
-  &:focus{
-    border-color: rgba(214, 81, 55, 0.7);
-
-    & ~ .contacts-input__num-label{
-      border-color: rgba(214, 81, 55, 0.7);
-      color: rgba(214, 81, 55, 0.7);
-    }
-  }
-
-}
-
 .contact-popup{
   position: relative;
 
   &__wrapper{
     position: absolute;
-    transform: translate(-190px, -100%);
-    width: 320px;
+    //transform: translate(-100px, -90px);
+    transform: translate(-150px, -55px);
+    width: 165px;
     box-sizing: border-box;
-    padding: 20px 10px 25px 50px;
+    padding: 20px 0 25px;
     font-weight: 500;
+    text-align: center;
     color: #232323;
     background: #ffffff;
-    box-shadow: 15px 15px 50px rgba(0, 0, 0, 0.15);
+    box-shadow: 5px 5px 29px rgba(0, 0, 0, 0.31);
 
     &::before{
       content: "";
       position: absolute;
       background-color: #ffffff;
-      right: 90px;
-      bottom: -10px;
+      right: -10px;
+      bottom: 32px;
       width: 20px;
       height: 20px;
-      z-index: -1;
+      z-index: -2;
       transform: rotate(45deg);
-      box-shadow: 15px 15px 50px rgba(0, 0, 0, 0.15);
+      box-shadow: 5px -5px 29px rgba(0, 0, 0, 0.31);
     }
-  }
 
-  &__phone{
-    position: relative;
-    font-size: 18px;
-    color: #232323;
-    letter-spacing: .06em;
-
-    &::before{
+    &::after{
       content: '';
       position: absolute;
-      width: 20px;
-      height: 20px;
-      left: -30px;
-      top: 50%;
-      transform: translateY(-50%);
-      background: url("/img/phone.png") no-repeat center;
-    }
-  }
-
-  &__addr{
-    position: relative;
-    margin-top: 10px;
-    line-height: 1.3;
-    color: #232323;
-
-    &::before{
-      content: '';
-      position: absolute;
-      width: 18px;
-      height: 23px;
-      left: -30px;
-      top: 50%;
-      transform: translateY(-50%);
-      background: url("/img/location.png") no-repeat center;
+      width: 24px;
+      height: 40px;
+      bottom: 25px;
+      right: 0;
+      background-color: #ffffff;
     }
   }
 }
@@ -256,6 +154,26 @@
     overflow: visible!important;
     &>div{
       overflow: visible!important;
+    }
+  }
+}
+
+.gm-style-pbc{
+  z-index: 5 !important;
+}
+
+.gm-style{
+  & > div:first-child{
+    & > div:nth-child(3){
+      & > div:first-child {
+        & > div:nth-child(4){
+          & > div:first-child {
+            & > div:first-child {
+              display: none;
+            }
+          }
+        }
+      }
     }
   }
 }
