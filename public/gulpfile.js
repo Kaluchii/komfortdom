@@ -11,7 +11,7 @@ var gulp         = require('gulp'),
 
     svgmin       = require('gulp-svgmin'),
     imagemin     = require('gulp-imagemin'),
-    minify       = require('gulp-minify');
+    // minify       = require('gulp-minify');
 
     changeCase   = require('change-case'),
     watch        = require('gulp-watch'),

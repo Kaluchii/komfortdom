@@ -36,7 +36,7 @@
             </div>
             <div class="form-group">
                 <label>Текст</label>
-                <textarea class="form-control text"
+                <textarea class="form-control text" data-reg="true"
                           data-name="text"
                           data-type="text"
                           data-block="contacts"

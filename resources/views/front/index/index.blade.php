@@ -167,7 +167,7 @@
             <div class="flats__top-wrapper">
                 <div class="flats__col1">
                     <h2 class="flats__title" id="flats">{{ $flats->block_title_field }}</h2>
-                    <p class="flats__text">{{ $flats->text_field }}</p>
+                    <p class="flats__text">{!! $flats->text_field !!}</p>
                 </div>
                 <div class="flats__col2 layout-choice">
                     <div class="layout-choice__btns-wrapper">
@@ -179,7 +179,7 @@
                                 @endif
                             @endforeach
                         </ul>
-                        <a href="{{$flats->layouts->link}}" download="{{$flats->layouts->title}}" class="layout-choice__download-plan">Скачать планы этажей</a>
+                        <a href="{{$flats->layouts->link}}" {{-- download="{{$flats->layouts->title}}"--}} target="_blank" class="layout-choice__download-plan">Скачать планы этажей</a>
                     </div>
                     <div class="layout-choice__btns-wrapper">
                         <p class="layout-choice__title">Площадь</p>
@@ -213,13 +213,13 @@
                         </div>
                         <div class="layout__info-row">
                             <div class="layout__row-item">
-                                <p class="layout__info-title">Стоимость от:</p>
+                                <p class="layout__info-title">Стоимость:</p>
                                 <p class="layout__price js_give_price"></p>
                             </div>
                         </div>
                     </div>
                     <div class="layout__feedback layout-feedback">
-                        <p class="layout-feedback__title">ПОНРАВИЛАСЬ КВАРТИРА?</p>
+                        <p class="layout-feedback__title">ПОНРАВИЛАСЬ ПЛАНИРОВКА?</p>
                         <p class="layout-feedback__text">Свяжитесь с нами и узнайте подробности</p>
                         <div class="layout-feedback__input-rows form-id" id="layout_call">
                             <input type="hidden" name="form" class="form-input" value="call">

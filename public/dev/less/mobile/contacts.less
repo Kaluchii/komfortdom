@@ -41,6 +41,29 @@
       width: 100%;
     }
   }
+
+  .contact-popup{
+    &__wrapper{
+      transform: translate(-72px, -18px);
+      width: 95px;
+      padding: 10px;
+      box-shadow: 3px 3px 19px rgba(0, 0, 0, 0.21);
+
+      &::before{
+        right: -5px;
+        bottom: 24px;
+        width: 10px;
+        height: 10px;
+        box-shadow: 3px -3px 19px rgba(0, 0, 0, 0.21);
+      }
+
+      &::after{
+        bottom: 14px;
+        width: 10px;
+        height: 30px;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 620px) {
@@ -54,8 +77,23 @@
       font-size: 30px;
     }
 
+    &__address{
+      margin: 55px auto 0;
+      max-width: 310px;
+    }
+
+    &__phone{
+      margin: 20px auto 0;
+      max-width: 310px;
+    }
+
     &__text{
       margin: 15px auto 0;
+    }
+
+    &__work-time{
+      margin: 40px auto 0;
+      max-width: 310px;
     }
   }
 }
