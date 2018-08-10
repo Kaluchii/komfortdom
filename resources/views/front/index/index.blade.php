@@ -253,7 +253,7 @@
                 <div class="contacts__contact-block-wrapper">
                     <h2 class="contacts__title" id="contacts">{{ $contacts->block_title_field }}</h2>
                     <p class="contacts__address">{!! $contacts->address_field !!}</p>
-                    <p class="contacts__phone">{{ $contacts->phone_field }}</p>
+                    <p class="contacts__phone"><a href="tel:{{ $contacts->phone_field }}" class="contacts__phone-link">{{ $contacts->phone_field }}</a></p>
                     <p class="contacts__text">{!! $contacts->text_field !!}</p>
                     <div class="contacts__work-time">
                         <div class="contacts__work-time-title">График работы:</div>
