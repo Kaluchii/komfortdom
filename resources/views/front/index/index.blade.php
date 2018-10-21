@@ -263,7 +263,6 @@
             </div>
             <div class="contacts__map-wrapper">
                 <div class="contacts__map" id="map"></div>
-                @include('front.index.map_init')
             </div>
         </div>
     </section>

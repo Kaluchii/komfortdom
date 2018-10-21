@@ -17,7 +17,7 @@ $(document).ready(function () {
             toFixedFix = function (n, prec) {
                 var k = Math.pow(10, prec);
                 return '' + (Math.round(n * k) / k)
-                        .toFixed(prec);
+                    .toFixed(prec);
             };
         // Fix for IE parseFloat(0.55).toFixed(0) = 0;
         s = (prec ? toFixedFix(n, prec) : '' + Math.round(n))
@@ -31,7 +31,7 @@ $(document).ready(function () {
         }
         //////
         if ((s[1] || '')
-                .length < prec) {
+            .length < prec) {
             s[1] = s[1] || '';
             s[1] += new Array(prec - s[1].length + 1)
                 .join('0');
@@ -231,4 +231,55 @@ $(document).ready(function () {
         fotorama.show($(this).data('img'));
         fotorama.requestFullScreen();
     });
+
+
+    /* Yandex map */
+
+    var init = function () {
+        myMap = new ymaps.Map("map",
+            {center: [43.203034, 76.896386], zoom: 16, controls: ['zoomControl']});
+        myMap.behaviors.disable("scrollZoom");
+        myMap.behaviors.disable("dblClickZoom");
+        if ($window.width() < 1000) {
+            var myPlacemark = new ymaps.Placemark([43.203034, 76.896986], {}, {
+                iconLayout: "default#image",
+                iconImageHref: "/img/map_icon.png",
+                iconImageSize: [120, 67],
+                iconImageOffset: [-120, -42]
+            });
+        } else {
+            var myPlacemark = new ymaps.Placemark([43.203034, 76.896986], {}, {
+                iconLayout: "default#image",
+                iconImageHref: "/img/map_icon.png",
+                iconImageSize: [162, 90],
+                iconImageOffset: [-162, -57]
+            });
+        }
+        myMap.geoObjects.add(myPlacemark);
+
+        $window.on('resize', function (){
+            if ($window.width() < 1000) {
+                myMap.geoObjects.removeAll();
+                myPlacemark = new ymaps.Placemark([43.203034, 76.896986], {}, {
+                    iconLayout: "default#image",
+                    iconImageHref: "/img/map_icon.png",
+                    iconImageSize: [120, 67],
+                    iconImageOffset: [-120, -42]
+                });
+                myMap.geoObjects.add(myPlacemark);
+            } else {
+                myMap.geoObjects.removeAll();
+                myPlacemark = new ymaps.Placemark([43.203034, 76.896986], {}, {
+                    iconLayout: "default#image",
+                    iconImageHref: "/img/map_icon.png",
+                    iconImageSize: [162, 90],
+                    iconImageOffset: [-162, -57]
+                });
+                myMap.geoObjects.add(myPlacemark);
+            }
+        });
+    };
+
+    ymaps.ready(init);
+    var myMap;
 });

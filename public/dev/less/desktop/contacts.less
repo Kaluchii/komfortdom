@@ -100,6 +100,7 @@
   &__map{
     height: 100%;
     width: 100%;
+    overflow: hidden;
   }
 }
 
@@ -107,84 +108,6 @@
   max-width: none;
 }
 
-.contact-popup{
-  position: relative;
-
-  &__wrapper{
-    position: absolute;
-    transform: translate(-150px, -55px);
-    width: 165px;
-    box-sizing: border-box;
-    padding: 20px 0 25px;
-    font-weight: 500;
-    text-align: center;
-    color: #232323;
-    background: #ffffff;
-    box-shadow: 5px 5px 29px rgba(0, 0, 0, 0.31);
-
-    &::before{
-      content: "";
-      position: absolute;
-      right: -10px;
-      bottom: 32px;
-      width: 20px;
-      height: 20px;
-      z-index: -2;
-      transform: rotate(45deg);
-      background-color: #ffffff;
-      box-shadow: 5px -5px 29px rgba(0, 0, 0, 0.31);
-    }
-
-    &::after{
-      content: '';
-      position: absolute;
-      bottom: 25px;
-      right: 0;
-      width: 24px;
-      height: 40px;
-      background-color: #ffffff;
-    }
-  }
-
-  &__logo{
-    max-width: 100% !important;
-  }
-}
-
-.gm-style-iw{
-  max-width: 320px!important;
-  overflow: visible!important;
-  left: -3px !important;
-  top: 30px !important;
-
-  &+div{
-    display: none;
-  }
-
-  &>div{
-    overflow: visible!important;
-    &>div{
-      overflow: visible!important;
-    }
-  }
-}
-
-.gm-style-pbc{
-  z-index: 5 !important;
-}
-
-.gm-style{
-  & > div:first-child{
-    & > div:nth-child(3){
-      & > div:first-child {
-        & > div:nth-child(4){
-          & > div:first-child {
-            & > div:first-child {
-              display: none;
-            }
-          }
-        }
-      }
-    }
-  }
+[class*="ymaps-2"][class*="-ground-pane"]{
+  filter: grayscale(1) brightness(80%);
 }

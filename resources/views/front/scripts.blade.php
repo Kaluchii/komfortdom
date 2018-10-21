@@ -4,6 +4,6 @@
     <script defer src="/js/jquery.mask.js"></script>
     <script defer src="/js/form.js"></script>
     <script defer src="/js/fotorama.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDNewYnwZ0sAkOOdjqUlcqpRm_HMZo5xMY&callback=initMap"></script>
+    <script defer src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
     <script defer src="/js/main.js"></script>
 @endsection
